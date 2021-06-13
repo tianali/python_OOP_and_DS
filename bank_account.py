@@ -5,8 +5,8 @@
 #5. Add a yield_interest method to the BankAccount class that increases the account balance by the current balance * the interest rate (as long as the balance is positive)
 
 class BankAccount: #1
-    def __init__(self, balance=0):
-        self.int_rate = 0.01
+    def __init__(self, int_rate, balance=0):
+        self.int_rate = int_rate
         self.balance = balance
 
     def deposit(self, amount): #2
@@ -21,7 +21,7 @@ class BankAccount: #1
         return self
 
     def display_account_info(self): #4
-        print("Balance: " + str(self.balance))
+        print("Balance: ", (self.balance))
 
     def yield_interest(self): #5
         if self.balance > 0:
@@ -29,8 +29,8 @@ class BankAccount: #1
         return self
 
 #Create two accounts
-rich = BankAccount(1000)
-poor = BankAccount()
+rich = BankAccount(0.02, 1000)
+poor = BankAccount(0.01)
 print(rich.balance)
 print(poor.balance)
 

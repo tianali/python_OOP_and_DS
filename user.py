@@ -11,13 +11,13 @@ class User:
         self.account_balance -= amount 
         return self
     def display_user_balance(self):
-        print("User: " + self.name + ", Balance: " + str(self.account_balance))
+        print("User: " + self.name + ", Balance: ", (self.account_balance))
     # bonus add a transfer_money method and have the first user transfer money to the third user and then print both users' balances
     def transfer_money(self, other_user, amount): 
         self.account_balance -= amount
         other_user.account_balance += amount
-        print("User: " + self.name + ", Balance: " + str(self.account_balance))
-        print("User: " + other_user.name + ", Balance: " + str(other_user.account_balance))
+        print("User: " + self.name + ", Balance: ", (self.account_balance))
+        print("User: " + other_user.name + ", Balance: ", (other_user.account_balance))
 
 #Create 3 instances of the User class
 bear = User("Bear", "bear@gmail.com")
