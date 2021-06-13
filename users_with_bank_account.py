@@ -12,7 +12,7 @@ class User:
         self.account.withdraw(amount)
         return self
     def display_user_balance(self):
-        print("User: " + self.name + ", Balance: ", (self.account.balance))
+        self.account.display_account_info()
 
     def transfer_money(self, other_user, amount): 
         self.account.balance -= amount
